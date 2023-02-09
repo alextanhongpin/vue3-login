@@ -4,6 +4,7 @@ import { storage } from "@/features/token";
 // Lazy load pages.
 const Home = () => import("@/pages/Home.vue");
 const Login = () => import("@/pages/Login.vue");
+const Admin = () => import("@/pages/Admin.vue");
 const Private = () => import("@/pages/Private.vue");
 
 const routes = [
@@ -30,6 +31,14 @@ const routes = [
     path: "/private",
     name: "Private",
     component: Private,
+    meta: {
+      requiresAuth: true,
+    },
+  },
+  {
+    path: "/admin",
+    name: "Admin",
+    component: Admin,
     meta: {
       requiresAuth: true,
     },

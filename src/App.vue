@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useAuth } from "@/features/auth";
+import { provideAuth } from "@/features/auth";
 
 // Initialize auth.
-useAuth();
+provideAuth();
 </script>
 
 <template>

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { injectAuth } from "@/features/auth";
+import { useAuth } from "@/features/auth";
 
-const { state, login } = injectAuth();
+const { state, login } = useAuth();
 
 const name = ref("");
 
